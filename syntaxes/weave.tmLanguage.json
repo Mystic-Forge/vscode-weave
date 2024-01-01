@@ -1,0 +1,154 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Weave",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#imports"
+		},
+		{
+			"include": "#enums"
+		},
+		{
+			"include": "#parameter"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.weave",
+					"match": "\\b(if|then|else|end|while|for|do|return|on|stop|next|function)\\b"
+				},
+				{
+					"name": "keyword.language.weave",
+					"match": "\\b(event|trigger|print|as|in|of|is|not|and|or|with|temp|save|load|export|typeof|to|exclusive|inclusive)\\b"
+				},
+				{
+					"name": "variable.other.constant.weave",
+					"match": "\\b(self|it|nil)\\b"
+				},
+				{
+					"name": "string.regexp.weave",
+					"match": "\\b(skip|take|where|sorted by|ascending|descending|reversed)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.weave",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.weave",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.weave",
+					"begin": "#-",
+					"end": "-#"
+				},
+				{
+					"name": "comment.line.number-sign.weave",
+					"match": "#.*"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.weave",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\()"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "constant.numeric.weave",
+					"match": "\\b\\d+\\b"
+				},
+				{
+					"name": "constant.language.boolean.weave",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"imports": {
+			"patterns": [
+				{
+					"name": "keyword.language.import.weave",
+					"begin": "\\bimport\\s+",
+					"end": "(?![A-Za-z0-9_/])",
+					"patterns": [
+						{
+							"name": "keyword.operator.import.weave",
+							"match": "[A-Za-z0-9_/]+/"
+						},
+						{
+							"name": "variable.other.import.weave",
+							"match": "[A-Za-z0-9_/]+"
+						}
+					]
+				}
+			]
+		},
+		"enums": {
+			"patterns": [
+				{
+					"name": "entity.name.type.enum.weave",
+					"begin": "\\b[A-Z][a-z0-9]*(?=\\.)",
+					"end": "(?![A-Za-z0-9\\.])",
+					"patterns": [
+						{
+							"name": "keyword.operator.accessor.weave",
+							"match": "\\."
+						},
+						{
+							"name": "variable.other.enummember.weave",
+							"match": "[A-Z][a-z0-9]*"
+						}
+					]
+				}
+			]
+		},
+		"parameter": {
+			"patterns": [
+				{
+					"name": "keyword.operator.parameterlabel.weave",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*:"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other.weave",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.weave"
+}

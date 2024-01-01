@@ -1,0 +1,25 @@
+{
+  "name": "weave",
+  "displayName": "Weave",
+  "description": "Provides Weave language support.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "weave",
+      "aliases": ["Weave", "weave"],
+      "extensions": [".wv"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "weave",
+      "scopeName": "source.weave",
+      "path": "./syntaxes/weave.tmLanguage.json"
+    }]
+  }
+}
