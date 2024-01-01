@@ -2,7 +2,7 @@
 
 This extension provides syntax highlighting for `.wv` files.
 
-Weave is language made to provide an accessible yet flexible interface to contributors and moddors of MysticForge projects. Weave is currently under development and so the language (and therefor this extension) is subject to change.
+Weave is language made to provide an accessible yet flexible interface to contributors and modders of MysticForge projects. Weave is currently under development and so the language (and therefor this extension) is subject to change.
 
 ## Features
 

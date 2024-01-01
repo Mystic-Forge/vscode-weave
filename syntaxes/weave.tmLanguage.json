@@ -39,7 +39,7 @@
 				},
 				{
 					"name": "keyword.language.weave",
-					"match": "\\b(event|trigger|print|as|in|of|is|not|and|or|with|temp|save|load|export|typeof|to|exclusive|inclusive)\\b"
+					"match": "\\b(event|trigger|print|as|in|of|is|not|and|or|with|temp|mod|save|load|export|typeof|to|exclusive|inclusive)\\b"
 				},
 				{
 					"name": "variable.other.constant.weave",

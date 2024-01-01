@@ -1,8 +1,14 @@
 {
   "name": "weave",
   "displayName": "Weave",
+  "publisher": "MysticForge",
   "description": "Provides Weave language support.",
   "version": "0.0.1",
+  "icon": "./images/weave-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mystic-Forge/vscode-weave"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -14,7 +20,11 @@
       "id": "weave",
       "aliases": ["Weave", "weave"],
       "extensions": [".wv"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./images/weave-icon.png",
+        "dark": "./images/weave-icon.png"
+      }
     }],
     "grammars": [{
       "language": "weave",
