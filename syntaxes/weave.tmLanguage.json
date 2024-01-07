@@ -39,7 +39,7 @@
 				},
 				{
 					"name": "keyword.language.weave",
-					"match": "\\b(event|trigger|print|as|in|of|is|not|and|or|with|temp|mod|save|load|export|typeof|to|exclusive|inclusive)\\b"
+					"match": "\\b(event|trigger|print|as|in|of|is|not|and|or|with|temp|mod|save|load|export|typeof|being)\\b"
 				},
 				{
 					"name": "variable.other.constant.weave",
@@ -47,7 +47,7 @@
 				},
 				{
 					"name": "string.regexp.weave",
-					"match": "\\b(skip|take|where|sorted by|ascending|descending|reversed)\\b"
+					"match": "\\b(index|skip|take|where|sorted|ascending|descending|reversed|select|unique|flattened|all|any|split|append|prepend|insert|aggregate|count|range|exclusive|inclusive|from|by|to|at)\\b"
 				}
 			]
 		},
